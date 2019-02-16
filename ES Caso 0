@@ -1,0 +1,32 @@
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+int mes, anyo;
+bool bisiesto;
+cout << " introduzca mes entre 1 y 12 ";
+//prueba mes=2;
+cin>>mes;
+cout << " introduzca año entero ";
+//prueba anyo=2020;
+cin>>anyo;
+if (anyo % 400 == 0)
+bisiesto = true;
+else if (anyo % 100 == 0)
+bisiesto = false;
+else
+bisiesto = (anyo % 4 == 0);
+if (mes == 2)
+if(bisiesto)
+cout << " tiene 29 dias\n";
+else
+cout << " tiene 28 dias\n";
+else
+if((mes == 4) || (mes == 6) || (mes == 9) || (mes == 11))
+cout << " tiene 30 dias \n";
+else
+cout <<" tiene 31 dias \n";
+system("PAUSE");
+return EXIT_SUCCESS;
+}
